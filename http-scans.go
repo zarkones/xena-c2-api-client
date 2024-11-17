@@ -30,7 +30,7 @@ func GetHttpScans(page int) (scans []HttpScan, err error) {
 	return scans, json.NewDecoder(resp.Body).Decode(&scans)
 }
 
-func InsertHttpScan(requestID string, agentIDs []string) (err error) {
+func InsertHttpScan(requestID int64, agentIDs []string) (err error) {
 	jsonBody, err := json.Marshal(&HttpScan{
 		ReqID:    requestID,
 		AgentIDs: strings.Join(agentIDs, ","),

@@ -6,7 +6,7 @@ import (
 
 type HttpScan struct {
 	ID       string `json:"id"`
-	ReqID    string `json:"reqId"`
+	ReqID    int64  `json:"reqId"`
 	AgentIDs string `json:"agentIds"`
 }
 
