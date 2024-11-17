@@ -4,6 +4,21 @@ import (
 	"fyne.io/fyne/v2"
 )
 
+type HttpScan struct {
+	ID       string `json:"id"`
+	ReqID    string `json:"reqId"`
+	AgentIDs string `json:"agentIds"`
+}
+
+type HttpScanTask struct {
+	ScanID      string `json:"scanId"`
+	AgentID     string `json:"agentId"`
+	ReqID       int64  `json:"reqId"`
+	Payload     string `json:"payload"`
+	RawRequest  string `json:"rawRequest"`
+	RawResponse string `json:"rawResponse"`
+}
+
 type Attack struct {
 	ID       string `json:"id"`
 	AgentID  string `json:"agentId"`
